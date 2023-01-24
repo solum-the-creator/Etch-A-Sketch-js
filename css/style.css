@@ -38,11 +38,11 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    background-color: rgb(252, 251, 251);
 }
 
 .grid-item {
     box-sizing: border-box;
-    background-color: rgb(203, 203, 203);
     border-top: 1px solid rgb(78, 78, 78);
     border-left: 1px solid rgb(78, 78, 78);
 }
