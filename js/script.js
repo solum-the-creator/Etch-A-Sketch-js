@@ -43,11 +43,15 @@ let mouseActive = false;
 gridList.forEach((node) => {
     node.addEventListener('mousedown', (e) => mouseActive=true);
     node.addEventListener('mouseover',paintSquare);
+    node.addEventListener('mousedown', paintSquare);
     node.addEventListener('mouseup',(e) => mouseActive = false);
     node.addEventListener('dragstart',(e)=> e.preventDefault());
 });
 
+    
     function paintSquare(e){
+
+
         if(mouseActive){
         if(current_mode === 'color'){
             this.style.backgroundColor = current_color;
@@ -61,6 +65,8 @@ gridList.forEach((node) => {
         }
     }
 }
+
+
 
 function paintRainbow() {
     let color_r = getRandom(256);
@@ -117,6 +123,9 @@ eraserButton.addEventListener('click', swapMode);
 
 function swapMode(e) {
     current_mode = this.dataset.mode;
+    const butnsList = document.querySelectorAll('.mode-button');
+    butnsList.forEach((button) => button.classList.remove('active'));
+    this.classList.add('active');
 
 }
 

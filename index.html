@@ -7,10 +7,13 @@
     <base href="/">
     <title>Etch A Sketch</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Etch A Sketch</h1>
+        <h1>Etch-a-Sketch</h1>
     </header>
     <main> 
         <div class="side-bar">
@@ -19,13 +22,13 @@
                     <input type="color" id="pick-color" name="pick-color">
                 </div>
                 <div class="color-mode">
-                    <button data-mode="color" class="color-button">Color mode</button>
+                    <button data-mode="color" class="mode-button color-button active">Color mode</button>
                 </div>
                 <div class="rainbow-mode">
-                    <button data-mode="rainbow" class="rainbow-button">Rainbow mode</button>
+                    <button data-mode="rainbow" class="mode-button rainbow-button">Rainbow mode</button>
                 </div>
                 <div class="eraser-mode">
-                    <button data-mode="eraser" class="eraser-button">Eraser</button>
+                    <button data-mode="eraser" class="mode-button eraser-button">Eraser</button>
                 </div>
                 <div class="clear-grid">
                     <button class="clear-button">Clear</button>
@@ -37,7 +40,7 @@
             </div>
             <div class="grid-size">
                 <p>16 x 16</p>
-                <input type="range" value="16" min="1" id="sizeGrid" name="sizeGrid" max="80" step="1">
+                <input type="range" value="16" min="2" id="sizeGrid" name="sizeGrid" max="80" step="1">
             </div>
         </div>
         <div class="grid">
